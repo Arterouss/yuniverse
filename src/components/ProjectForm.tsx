@@ -202,11 +202,34 @@ export default function ProjectForm({ initialData, onSubmit, isSubmitting = fals
 
   const onFormSubmit = async (data: ProjectFormData) => {
     setFormError(null);
-    if (features.length === 0) {
+
+    // Auto-capture any pending text typed in input boxes before clicking Save
+    const finalFeatures = [...features];
+    if (newFeature.trim() && !finalFeatures.includes(newFeature.trim())) {
+      finalFeatures.push(newFeature.trim());
+      setFeatures(finalFeatures);
+      setNewFeature("");
+    }
+
+    const finalTechs = [...technologies];
+    if (newTech.trim() && !finalTechs.includes(newTech.trim())) {
+      finalTechs.push(newTech.trim());
+      setTechnologies(finalTechs);
+      setNewTech("");
+    }
+
+    const finalGalleries = [...galleryUrls];
+    if (newGalleryUrl.trim() && !finalGalleries.includes(newGalleryUrl.trim())) {
+      finalGalleries.push(newGalleryUrl.trim());
+      setGalleryUrls(finalGalleries);
+      setNewGalleryUrl("");
+    }
+
+    if (finalFeatures.length === 0) {
       setFormError("Please add at least one feature/highlight.");
       return;
     }
-    if (technologies.length === 0) {
+    if (finalTechs.length === 0) {
       setFormError("Please add at least one technology item.");
       return;
     }
@@ -214,9 +237,9 @@ export default function ProjectForm({ initialData, onSubmit, isSubmitting = fals
     try {
       await onSubmit({
         ...data,
-        features,
-        technologies,
-        galleryUrls,
+        features: finalFeatures,
+        technologies: finalTechs,
+        galleryUrls: finalGalleries,
         createdAt: initialData?.createdAt || Date.now(),
         updatedAt: Date.now(),
         githubClicks: initialData?.githubClicks || 0,
