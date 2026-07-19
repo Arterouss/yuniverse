@@ -27,6 +27,31 @@ const projectSchema = z.object({
 
 type ProjectFormData = z.infer<typeof projectSchema>;
 
+const PRESET_TECHNOLOGIES = [
+  "Next.js 16 App Router",
+  "TypeScript",
+  "Tailwind CSS v4",
+  "PHP Laravel",
+  "PostgreSQL / Supabase",
+  "Firebase Cloud Firestore",
+  "Framer Motion",
+  "Recharts Analytics",
+  "React 19",
+  "AI / LLM Integration",
+  "Node.js / Express",
+  "Docker / CI/CD",
+];
+
+const PRESET_FEATURES = [
+  "Real-time multi-currency ledger with zero-latency WebSocket data streaming",
+  "Predictive cashflow modeling powered by AI transaction categorization",
+  "GPU-accelerated interactive charts with smooth hover scrubbing & zoom",
+  "Enterprise-grade Row Level Security (RLS) & encrypted memo processing",
+  "Responsive 3D spatial glassmorphism dashboard tailored for dark mode",
+  "Direct-to-database Server Actions & concurrent UI rendering",
+  "Strict Zero-Dummy Data cloud persistence & real-time sync",
+];
+
 interface ProjectFormProps {
   initialData?: Partial<Project>;
   onSubmit: (data: Omit<Project, "id">) => Promise<void>;
@@ -465,6 +490,39 @@ export default function ProjectForm({ initialData, onSubmit, isSubmitting = fals
               </span>
             ))}
           </div>
+
+          {/* Quick Click Preset Technologies */}
+          <div className="pt-3 border-t border-sky-400/10">
+            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+              ⚡ Quick-Add Technology Presets (Click to Add / Toggle):
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {PRESET_TECHNOLOGIES.map((preset) => {
+                const isSelected = technologies.includes(preset);
+                return (
+                  <button
+                    key={preset}
+                    type="button"
+                    onClick={() => {
+                      if (isSelected) {
+                        setTechnologies(technologies.filter((t) => t !== preset));
+                      } else {
+                        setTechnologies([...technologies, preset]);
+                      }
+                    }}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all duration-200 border flex items-center gap-1.5 cursor-pointer ${
+                      isSelected
+                        ? "bg-sky-500/30 border-sky-400 text-ice-white shadow-[0_0_12px_rgba(56,189,248,0.3)] font-bold"
+                        : "bg-white/[0.03] border-sky-400/20 text-slate-300 hover:border-sky-400/60 hover:bg-white/[0.06]"
+                    }`}
+                  >
+                    <span>{isSelected ? "✓" : "+"}</span>
+                    <span>{preset}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Features / Highlights List */}
@@ -509,6 +567,39 @@ export default function ProjectForm({ initialData, onSubmit, isSubmitting = fals
               </li>
             ))}
           </ul>
+
+          {/* Quick Click Preset Features */}
+          <div className="pt-3 border-t border-sky-400/10">
+            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block mb-2">
+              ⚡ Quick-Add Feature Presets (Click to Add / Toggle):
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {PRESET_FEATURES.map((preset) => {
+                const isSelected = features.includes(preset);
+                return (
+                  <button
+                    key={preset}
+                    type="button"
+                    onClick={() => {
+                      if (isSelected) {
+                        setFeatures(features.filter((f) => f !== preset));
+                      } else {
+                        setFeatures([...features, preset]);
+                      }
+                    }}
+                    className={`px-3 py-1.5 rounded-xl text-xs transition-all duration-200 border text-left flex items-center gap-2 cursor-pointer ${
+                      isSelected
+                        ? "bg-cyan-500/25 border-cyan-400 text-ice-white shadow-[0_0_12px_rgba(6,182,212,0.3)] font-semibold"
+                        : "bg-white/[0.03] border-sky-400/20 text-slate-300 hover:border-cyan-400/50 hover:bg-white/[0.06]"
+                    }`}
+                  >
+                    <span className="font-mono text-sm shrink-0">{isSelected ? "✓" : "+"}</span>
+                    <span className="line-clamp-1">{preset}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Gallery URLs / Local Screenshot Upload */}
