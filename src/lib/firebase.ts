@@ -36,13 +36,45 @@ export const storage = getStorage(app);
 
 const COLLECTION_NAME = "projects";
 
-// Fetch projects with optional filters
+// In-memory SWR cache for instant 0ms responses across page navigations
+const memoryCache = new Map<string, { data: any; timestamp: number }>();
+const CACHE_TTL_MS = 2 * 60 * 1000; // 2 minutes
+
+// Fetch projects with optional filters + instant SWR caching
 export async function getProjects(options?: {
   onlyPublished?: boolean;
   onlyFeatured?: boolean;
   category?: string;
   searchQuery?: string;
 }): Promise<Project[]> {
+  const cacheKey = `projects_cache_${JSON.stringify(options || {})}`;
+
+  // 1. Check fast in-memory cache
+  const mem = memoryCache.get(cacheKey);
+  if (mem && Date.now() - mem.timestamp < CACHE_TTL_MS) {
+    return mem.data;
+  }
+
+  // 2. Check persistent localStorage cache for instant cold load rendering
+  if (typeof window !== "undefined") {
+    const local = localStorage.getItem(cacheKey);
+    if (local) {
+      try {
+        const parsed = JSON.parse(local);
+        if (parsed && Array.isArray(parsed.data) && Date.now() - parsed.timestamp < 15 * 60 * 1000) {
+          memoryCache.set(cacheKey, parsed);
+          // Trigger silent background refresh
+          setTimeout(() => fetchAndCacheProjects(options, cacheKey).catch(() => {}), 100);
+          return parsed.data;
+        }
+      } catch (e) {}
+    }
+  }
+
+  return await fetchAndCacheProjects(options, cacheKey);
+}
+
+async function fetchAndCacheProjects(options: any, cacheKey: string): Promise<Project[]> {
   try {
     const projectsRef = collection(db, COLLECTION_NAME);
     let q = query(projectsRef);
@@ -77,9 +109,18 @@ export async function getProjects(options?: {
           p.title.toLowerCase().includes(lowQuery) ||
           p.tagline.toLowerCase().includes(lowQuery) ||
           p.overview.toLowerCase().includes(lowQuery) ||
-          p.technologies.some((tech) => tech.toLowerCase().includes(lowQuery)) ||
+          p.technologies.some((tech: string) => tech.toLowerCase().includes(lowQuery)) ||
           p.category.toLowerCase().includes(lowQuery)
       );
+    }
+
+    // Save fresh data to in-memory and local storage caches
+    const cachePayload = { data: projects, timestamp: Date.now() };
+    memoryCache.set(cacheKey, cachePayload);
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify(cachePayload));
+      } catch (e) {}
     }
 
     return projects;
@@ -89,8 +130,35 @@ export async function getProjects(options?: {
   }
 }
 
-// Fetch single project by Slug
+// Fetch single project by Slug + instant SWR caching
 export async function getProjectBySlug(slug: string): Promise<Project | null> {
+  const cacheKey = `project_slug_${slug}`;
+
+  // 1. Check in-memory cache
+  const mem = memoryCache.get(cacheKey);
+  if (mem && Date.now() - mem.timestamp < CACHE_TTL_MS) {
+    return mem.data;
+  }
+
+  // 2. Check localStorage cache
+  if (typeof window !== "undefined") {
+    const local = localStorage.getItem(cacheKey);
+    if (local) {
+      try {
+        const parsed = JSON.parse(local);
+        if (parsed && parsed.data && Date.now() - parsed.timestamp < 15 * 60 * 1000) {
+          memoryCache.set(cacheKey, parsed);
+          setTimeout(() => fetchAndCacheBySlug(slug, cacheKey).catch(() => {}), 100);
+          return parsed.data;
+        }
+      } catch (e) {}
+    }
+  }
+
+  return await fetchAndCacheBySlug(slug, cacheKey);
+}
+
+async function fetchAndCacheBySlug(slug: string, cacheKey: string): Promise<Project | null> {
   try {
     const projectsRef = collection(db, COLLECTION_NAME);
     const q = query(projectsRef, where("slug", "==", slug));
@@ -99,10 +167,20 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
     if (snapshot.empty) return null;
 
     const docSnap = snapshot.docs[0];
-    return {
+    const project = {
       id: docSnap.id,
       ...docSnap.data(),
     } as Project;
+
+    const cachePayload = { data: project, timestamp: Date.now() };
+    memoryCache.set(cacheKey, cachePayload);
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify(cachePayload));
+      } catch (e) {}
+    }
+
+    return project;
   } catch (error) {
     console.error("Error fetching project by slug:", error);
     return null;
@@ -127,6 +205,20 @@ export async function getProjectById(id: string): Promise<Project | null> {
   }
 }
 
+// Helper to invalidate SWR cache immediately on mutation
+export function clearProjectsCache() {
+  memoryCache.clear();
+  if (typeof window !== "undefined") {
+    try {
+      Object.keys(localStorage).forEach((key) => {
+        if (key.startsWith("projects_cache_") || key.startsWith("project_slug_")) {
+          localStorage.removeItem(key);
+        }
+      });
+    } catch (e) {}
+  }
+}
+
 // Create new project
 export async function createProject(projectData: Omit<Project, 'id'>): Promise<string> {
   try {
@@ -140,6 +232,7 @@ export async function createProject(projectData: Omit<Project, 'id'>): Promise<s
       liveDemoClicks: projectData.liveDemoClicks || 0,
     };
     const docRef = await addDoc(projectsRef, payload);
+    clearProjectsCache();
     return docRef.id;
   } catch (error) {
     console.error("Error creating project:", error);
@@ -155,6 +248,7 @@ export async function updateProject(id: string, projectData: Partial<Project>): 
       ...projectData,
       updatedAt: Date.now(),
     });
+    clearProjectsCache();
   } catch (error) {
     console.error("Error updating project:", error);
     throw error;
@@ -166,6 +260,7 @@ export async function deleteProject(id: string): Promise<void> {
   try {
     const docRef = doc(db, COLLECTION_NAME, id);
     await deleteDoc(docRef);
+    clearProjectsCache();
   } catch (error) {
     console.error("Error deleting project:", error);
     throw error;
