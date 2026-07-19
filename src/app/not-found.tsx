@@ -5,19 +5,19 @@ import { Sparkles, ArrowLeft, Home, Compass } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="min-h-[75vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-12">
-      <div className="w-full p-8 sm:p-14 rounded-3xl cosmic-glass border-2 border-sky-400/40 shadow-[0_0_50px_rgba(56,189,248,0.25)] relative overflow-hidden text-center">
+      <div className="w-full p-8 sm:p-14 rounded-3xl cosmic-glass border-2 border-rose-400/40 shadow-[0_0_50px_rgba(244,63,94,0.25)] relative overflow-hidden text-center">
         {/* Decorative background gradients */}
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-sky-500/20 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-tl from-purple-500/20 via-cyan-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-rose-500/20 via-pink-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-tl from-purple-500/20 via-red-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
         {/* Floating Icon Orb */}
-        <div className="w-24 h-24 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-sky-400/20 via-cyan-500/20 to-blue-600/20 border border-sky-400/40 flex items-center justify-center shadow-[0_0_30px_rgba(56,189,248,0.3)] animate-float-slow">
-          <Compass className="w-12 h-12 text-sky-400 animate-pulse" />
+        <div className="w-24 h-24 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-rose-400/20 via-red-500/20 to-pink-600/20 border border-rose-400/40 flex items-center justify-center shadow-[0_0_30px_rgba(244,63,94,0.3)] animate-float-slow">
+          <Compass className="w-12 h-12 text-rose-400 animate-pulse" />
         </div>
 
         {/* 404 Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full cosmic-glass border border-sky-400/40 text-xs font-mono uppercase tracking-widest text-sky-300 shadow-[0_0_20px_rgba(56,189,248,0.2)] mb-4">
-          <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full cosmic-glass border border-rose-400/40 text-xs font-mono uppercase tracking-widest text-rose-300 shadow-[0_0_20px_rgba(244,63,94,0.2)] mb-4">
+          <Sparkles className="w-3.5 h-3.5 text-rose-400" />
           <span>Error 404 — Dimension Uncharted</span>
         </div>
 
@@ -32,7 +32,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(56,189,248,0.5)] hover:shadow-[0_0_35px_rgba(56,189,248,0.8)] hover:scale-[1.02] transition-all duration-300"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(244,63,94,0.5)] hover:shadow-[0_0_35px_rgba(244,63,94,0.8)] hover:scale-[1.02] transition-all duration-300"
           >
             <Home className="w-5 h-5" />
             <span>Return to Digital Universe</span>
@@ -41,7 +41,7 @@ export default function NotFound() {
 
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-sky-400/30 text-sky-300 hover:text-white font-semibold text-sm transition-all hover:border-sky-400"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-rose-400/30 text-rose-300 hover:text-white font-semibold text-sm transition-all hover:border-rose-400"
           >
             <span>Explore Project Catalog</span>
           </Link>

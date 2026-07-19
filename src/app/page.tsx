@@ -43,7 +43,7 @@ export default function Home() {
             className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-ice-white"
           >
             A Digital Universe <br className="hidden sm:inline" />
-            <span className="cosmic-gradient-text drop-shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+            <span className="cosmic-gradient-text drop-shadow-[0_0_30px_rgba(244,63,94,0.4)]">
               of My Work
             </span>
           </motion.h1>
@@ -55,7 +55,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            Welcome to <strong className="text-sky-400 font-bold">YuuUnivers</strong> — explore my collection of projects, creative ideas, and digital experiences built with passion, innovation, and modern technology.
+            Welcome to <strong className="text-rose-400 font-bold">YuuUnivers</strong> — explore my collection of projects, creative ideas, and digital experiences built with passion, innovation, and modern technology.
           </motion.p>
 
           {/* Dual CTAs */}
@@ -67,14 +67,14 @@ export default function Home() {
           >
             <Link
               href="#projects"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(56,189,248,0.5)] hover:shadow-[0_0_45px_rgba(56,189,248,0.8)] hover:scale-105 transition-all flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(244,63,94,0.5)] hover:shadow-[0_0_45px_rgba(244,63,94,0.8)] hover:scale-105 transition-all flex items-center justify-center gap-3"
             >
               <Rocket className="w-5 h-5" />
               <span>Explore Portofolio</span>
             </Link>
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl cosmic-glass border border-sky-400/30 text-ice-white hover:text-sky-300 font-semibold text-sm tracking-wider uppercase hover:border-sky-400 hover:shadow-[0_0_25px_rgba(56,189,248,0.2)] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl cosmic-glass border border-rose-400/30 text-ice-white hover:text-rose-300 font-semibold text-sm tracking-wider uppercase hover:border-rose-400 hover:shadow-[0_0_25px_rgba(244,63,94,0.2)] transition-all flex items-center justify-center gap-2"
             >
               <span>Contact Me</span>
               <ArrowRight className="w-4 h-4" />
@@ -88,9 +88,9 @@ export default function Home() {
 
       {/* 2. FEATURED CASE STUDIES (CRITICAL RULE ENFORCEMENT) */}
       <section id="projects" className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12 border-b border-sky-400/20 pb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12 border-b border-rose-400/20 pb-6">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400 mb-2">
+            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-rose-400 mb-2">
               <FolderGit2 className="w-4 h-4" />
               <span>Real-Time Cloud Firestore Data</span>
             </div>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <Link
             href="/projects"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-white transition-colors"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-rose-300 hover:text-white transition-colors"
           >
             <span>View All Projects in Catalog</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -110,7 +110,7 @@ export default function Home() {
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-pulse">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="h-96 rounded-3xl cosmic-glass bg-white/[0.02] border border-sky-400/20" />
+              <div key={i} className="h-96 rounded-3xl cosmic-glass bg-white/[0.02] border border-rose-400/20" />
             ))}
           </div>
         ) : featuredProjects.length > 0 ? (
@@ -128,7 +128,7 @@ export default function Home() {
       {/* 3. INTERACTIVE TECH STACK BENTO GRID */}
       <section id="skills" className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-400">
+          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-red-400">
             <Cpu className="w-4 h-4" />
             <span>Interactive Skills Matrix</span>
           </div>
@@ -146,7 +146,7 @@ export default function Home() {
       {/* 4. PROFESSIONAL CAREER TIMELINE */}
       <section id="timeline" className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400">
+          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-rose-400">
             <Layers className="w-4 h-4" />
             <span>Career Milestones & Growth</span>
           </div>

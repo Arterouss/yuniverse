@@ -83,7 +83,7 @@ export default function ProjectDetailPage() {
       <div className="pt-4">
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl cosmic-glass border border-sky-400/30 text-xs font-semibold text-sky-300 hover:text-white hover:border-sky-400 transition-all"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl cosmic-glass border border-rose-400/30 text-xs font-semibold text-rose-300 hover:text-white hover:border-rose-400 transition-all"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Project Catalog</span>
@@ -91,13 +91,13 @@ export default function ProjectDetailPage() {
       </div>
 
       {/* Hero Banner Header */}
-      <div className="space-y-6 border-b border-sky-400/20 pb-10">
+      <div className="space-y-6 border-b border-rose-400/20 pb-10">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/15 text-sky-300 border border-sky-400/30">
+          <span className="px-3 py-1 rounded-full text-xs font-bold bg-rose-500/15 text-rose-300 border border-rose-400/30">
             {project.category}
           </span>
           {project.isFeatured && (
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 text-[#080A0F] shadow-[0_0_15px_rgba(56,189,248,0.4)] flex items-center gap-1">
+            <span className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-rose-400 via-red-500 to-pink-500 text-[#0B0608] shadow-[0_0_15px_rgba(244,63,94,0.4)] flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Featured Architecture</span>
             </span>
@@ -120,12 +120,12 @@ export default function ProjectDetailPage() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleExternalClick("liveDemo")}
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(56,189,248,0.5)] hover:shadow-[0_0_45px_rgba(56,189,248,0.8)] hover:scale-105 transition-all flex items-center gap-2.5"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(244,63,94,0.5)] hover:shadow-[0_0_45px_rgba(244,63,94,0.8)] hover:scale-105 transition-all flex items-center gap-2.5"
             >
               <ExternalLink className="w-5 h-5" />
               <span>Launch Live Demo</span>
               {typeof project.liveDemoClicks === "number" && project.liveDemoClicks > 0 && (
-                <span className="ml-1 px-2 py-0.5 bg-[#080A0F]/30 rounded-md text-[11px] font-mono">
+                <span className="ml-1 px-2 py-0.5 bg-[#0B0608]/30 rounded-md text-[11px] font-mono">
                   {project.liveDemoClicks} clicks
                 </span>
               )}
@@ -138,12 +138,12 @@ export default function ProjectDetailPage() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleExternalClick("github")}
-              className="px-8 py-4 rounded-2xl cosmic-glass border border-sky-400/30 text-ice-white hover:text-sky-300 font-semibold text-sm tracking-wider uppercase hover:border-sky-400 hover:shadow-[0_0_25px_rgba(56,189,248,0.2)] transition-all flex items-center gap-2.5"
+              className="px-8 py-4 rounded-2xl cosmic-glass border border-rose-400/30 text-ice-white hover:text-rose-300 font-semibold text-sm tracking-wider uppercase hover:border-rose-400 hover:shadow-[0_0_25px_rgba(244,63,94,0.2)] transition-all flex items-center gap-2.5"
             >
               <Github className="w-5 h-5" />
               <span>View GitHub Code</span>
               {typeof project.githubClicks === "number" && project.githubClicks > 0 && (
-                <span className="ml-1 px-2 py-0.5 bg-sky-400/20 rounded-md text-[11px] font-mono text-sky-300">
+                <span className="ml-1 px-2 py-0.5 bg-rose-400/20 rounded-md text-[11px] font-mono text-rose-300">
                   {project.githubClicks} clicks
                 </span>
               )}
@@ -154,11 +154,11 @@ export default function ProjectDetailPage() {
 
       {/* Screenshot Gallery Viewer */}
       <div className="space-y-4">
-        <div className="relative h-80 sm:h-[480px] rounded-3xl overflow-hidden cosmic-glass border border-sky-400/30 shadow-[0_10px_50px_rgba(56,189,248,0.15)]">
+        <div className="relative h-80 sm:h-[480px] rounded-3xl overflow-hidden cosmic-glass border border-rose-400/30 shadow-[0_10px_50px_rgba(244,63,94,0.15)]">
           <img
             src={activeImage || project.thumbnailUrl}
             alt={project.title}
-            className="w-full h-full object-cover sm:object-contain bg-[#080A0F]"
+            className="w-full h-full object-cover sm:object-contain bg-[#0B0608]"
           />
         </div>
 
@@ -170,8 +170,8 @@ export default function ProjectDetailPage() {
                 onClick={() => setActiveImage(url)}
                 className={`relative w-28 sm:w-36 h-20 rounded-2xl overflow-hidden border-2 transition-all shrink-0 ${
                   activeImage === url
-                    ? "border-sky-400 shadow-[0_0_20px_rgba(56,189,248,0.5)] scale-105"
-                    : "border-sky-400/20 opacity-60 hover:opacity-100"
+                    ? "border-rose-400 shadow-[0_0_20px_rgba(244,63,94,0.5)] scale-105"
+                    : "border-rose-400/20 opacity-60 hover:opacity-100"
                 }`}
               >
                 <img src={url} alt={`Preview ${idx}`} className="w-full h-full object-cover" />
@@ -185,9 +185,9 @@ export default function ProjectDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left 2 Cols: Comprehensive Overview & Features */}
         <div className="lg:col-span-2 space-y-8">
-          <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/25 space-y-4 shadow-[0_4px_30px_rgba(56,189,248,0.08)]">
-            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-3">
-              <Sparkles className="w-5 h-5 text-sky-400" />
+          <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/25 space-y-4 shadow-[0_4px_30px_rgba(244,63,94,0.08)]">
+            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-3">
+              <Sparkles className="w-5 h-5 text-rose-400" />
               <span>Project Overview</span>
             </h3>
             <p className="text-slate-300 text-base leading-relaxed whitespace-pre-line">
@@ -196,18 +196,18 @@ export default function ProjectDetailPage() {
           </div>
 
           {/* Key Features List */}
-          <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/25 space-y-6 shadow-[0_4px_30px_rgba(56,189,248,0.08)]">
-            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-3">
-              <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+          <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/25 space-y-6 shadow-[0_4px_30px_rgba(244,63,94,0.08)]">
+            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-3">
+              <CheckCircle2 className="w-5 h-5 text-red-400" />
               <span>Key Features & Engineering Highlights</span>
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {project.features.map((feat, idx) => (
                 <li
                   key={idx}
-                  className="p-4 rounded-2xl bg-white/[0.03] border border-sky-400/15 flex items-start gap-3 text-sm text-slate-200"
+                  className="p-4 rounded-2xl bg-white/[0.03] border border-rose-400/15 flex items-start gap-3 text-sm text-slate-200"
                 >
-                  <span className="w-2 h-2 rounded-full bg-sky-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(56,189,248,0.8)]" />
+                  <span className="w-2 h-2 rounded-full bg-rose-400 shrink-0 mt-1.5 shadow-[0_0_8px_rgba(244,63,94,0.8)]" />
                   <span>{feat}</span>
                 </li>
               ))}
@@ -217,16 +217,16 @@ export default function ProjectDetailPage() {
 
         {/* Right 1 Col: Tech Stack Tags & Metadata */}
         <div className="space-y-8">
-          <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/25 space-y-6 shadow-[0_4px_30px_rgba(56,189,248,0.08)]">
-            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-3">
-              <Terminal className="w-5 h-5 text-sky-400" />
+          <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/25 space-y-6 shadow-[0_4px_30px_rgba(244,63,94,0.08)]">
+            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-3">
+              <Terminal className="w-5 h-5 text-rose-400" />
               <span>Technology Stack</span>
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3.5 py-1.5 rounded-xl bg-sky-500/10 border border-sky-400/30 text-xs font-mono font-bold text-sky-300 shadow-[0_0_12px_rgba(56,189,248,0.15)]"
+                  className="px-3.5 py-1.5 rounded-xl bg-rose-500/10 border border-rose-400/30 text-xs font-mono font-bold text-rose-300 shadow-[0_0_12px_rgba(244,63,94,0.15)]"
                 >
                   {tech}
                 </span>
@@ -240,9 +240,9 @@ export default function ProjectDetailPage() {
       {(project.architecture || project.databaseSchema) && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {project.architecture && (
-            <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/25 space-y-4 shadow-[0_4px_30px_rgba(56,189,248,0.08)]">
-              <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-3">
-                <Layers className="w-5 h-5 text-sky-400" />
+            <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/25 space-y-4 shadow-[0_4px_30px_rgba(244,63,94,0.08)]">
+              <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-3">
+                <Layers className="w-5 h-5 text-rose-400" />
                 <span>System Architecture</span>
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed whitespace-pre-line font-mono">
@@ -252,12 +252,12 @@ export default function ProjectDetailPage() {
           )}
 
           {project.databaseSchema && (
-            <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/25 space-y-4 shadow-[0_4px_30px_rgba(56,189,248,0.08)]">
-              <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-3">
-                <Database className="w-5 h-5 text-cyan-400" />
+            <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/25 space-y-4 shadow-[0_4px_30px_rgba(244,63,94,0.08)]">
+              <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-3">
+                <Database className="w-5 h-5 text-red-400" />
                 <span>Database Schema & Security</span>
               </h3>
-              <div className="p-4 rounded-2xl bg-[#080A0F]/90 border border-sky-400/20 font-mono text-xs text-cyan-300 overflow-x-auto leading-relaxed">
+              <div className="p-4 rounded-2xl bg-[#0B0608]/90 border border-rose-400/20 font-mono text-xs text-red-300 overflow-x-auto leading-relaxed">
                 <pre>{project.databaseSchema}</pre>
               </div>
             </div>

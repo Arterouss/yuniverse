@@ -34,8 +34,8 @@ export default function TechStackBento() {
               onClick={() => setActiveTab(cat)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${
                 isActive
-                  ? "bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 text-[#080A0F] font-bold shadow-[0_0_20px_rgba(56,189,248,0.5)] scale-105"
-                  : "cosmic-glass text-slate-300 hover:text-sky-300 hover:border-sky-400/40"
+                  ? "bg-gradient-to-r from-rose-400 via-red-500 to-pink-500 text-[#0B0608] font-bold shadow-[0_0_20px_rgba(244,63,94,0.5)] scale-105"
+                  : "cosmic-glass text-slate-300 hover:text-rose-300 hover:border-rose-400/40"
               }`}
             >
               {cat}
@@ -60,22 +60,22 @@ export default function TechStackBento() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: -20 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="group cosmic-glass rounded-3xl p-6 border border-sky-400/20 hover:border-sky-400/60 shadow-[0_4px_20px_rgba(56,189,248,0.08)] hover:shadow-[0_10px_35px_rgba(56,189,248,0.22)] transition-all duration-300 flex flex-col justify-between"
+                className="group cosmic-glass rounded-3xl p-6 border border-rose-400/20 hover:border-rose-400/60 shadow-[0_4px_20px_rgba(244,63,94,0.08)] hover:shadow-[0_10px_35px_rgba(244,63,94,0.22)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-400/15 to-cyan-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(56,189,248,0.15)]">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-400/15 to-red-500/15 border border-rose-400/30 flex items-center justify-center text-rose-400 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_15px_rgba(244,63,94,0.15)]">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="text-sm font-bold text-sky-400 font-mono bg-sky-400/10 px-3 py-1 rounded-full border border-sky-400/25">
+                    <span className="text-sm font-bold text-rose-400 font-mono bg-rose-400/10 px-3 py-1 rounded-full border border-rose-400/25">
                       {skill.level}%
                     </span>
                   </div>
 
-                  <h4 className="text-base font-bold text-ice-white mb-1 group-hover:text-sky-300 transition-colors">
+                  <h4 className="text-base font-bold text-ice-white mb-1 group-hover:text-rose-300 transition-colors">
                     {skill.name}
                   </h4>
-                  <span className="text-[11px] text-cyan-400/80 uppercase tracking-widest font-mono block mb-3">
+                  <span className="text-[11px] text-red-400/80 uppercase tracking-widest font-mono block mb-3">
                     {skill.category}
                   </span>
                   {skill.highlight && (
@@ -86,12 +86,12 @@ export default function TechStackBento() {
                 </div>
 
                 {/* Animated Progress Bar */}
-                <div className="w-full bg-[#080A0F] h-2.5 rounded-full overflow-hidden border border-sky-400/20 p-0.5">
+                <div className="w-full bg-[#0B0608] h-2.5 rounded-full overflow-hidden border border-rose-400/20 p-0.5">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${skill.level}%` }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 rounded-full shadow-[0_0_12px_rgba(56,189,248,0.6)]"
+                    className="h-full bg-gradient-to-r from-rose-400 via-red-500 to-pink-500 rounded-full shadow-[0_0_12px_rgba(244,63,94,0.6)]"
                   />
                 </div>
               </motion.div>

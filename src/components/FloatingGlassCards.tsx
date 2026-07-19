@@ -56,9 +56,9 @@ export default function FloatingGlassCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto z-10">
       {/* Card 1: Available for Work */}
-      <TiltCard className="hover:border-sky-400/50 hover:shadow-[0_0_35px_rgba(56,189,248,0.25)] border-t-2 border-t-sky-400/40">
+      <TiltCard className="hover:border-rose-400/50 hover:shadow-[0_0_35px_rgba(244,63,94,0.25)] border-t-2 border-t-rose-400/40">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-11 h-11 rounded-2xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+          <div className="w-11 h-11 rounded-2xl bg-rose-500/15 border border-rose-400/30 flex items-center justify-center text-rose-400 shadow-[0_0_15px_rgba(244,63,94,0.2)]">
             <Zap className="w-6 h-6 animate-pulse" />
           </div>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-400/30 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
@@ -72,7 +72,7 @@ export default function FloatingGlassCards() {
         <p className="text-slate-400 text-sm leading-relaxed mb-4">
           Ready to turn visionary concepts into high-converting, scalable spatial web interfaces with extreme performance.
         </p>
-        <div className="pt-3 border-t border-sky-400/15 flex items-center justify-between text-xs font-mono text-sky-300">
+        <div className="pt-3 border-t border-rose-400/15 flex items-center justify-between text-xs font-mono text-rose-300">
           <span>Response: &lt; 2 hours</span>
           <span className="flex items-center gap-1">
             Global Remote <ArrowUpRight className="w-3.5 h-3.5" />
@@ -81,12 +81,12 @@ export default function FloatingGlassCards() {
       </TiltCard>
 
       {/* Card 2: Full Stack Mastery */}
-      <TiltCard className="hover:border-cyan-400/50 hover:shadow-[0_0_35px_rgba(6,182,212,0.25)] border-t-2 border-t-cyan-400/40">
+      <TiltCard className="hover:border-red-400/50 hover:shadow-[0_0_35px_rgba(239,68,68,0.25)] border-t-2 border-t-red-400/40">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+          <div className="w-11 h-11 rounded-2xl bg-red-500/15 border border-red-400/30 flex items-center justify-center text-red-400 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
             <Layers className="w-6 h-6" />
           </div>
-          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-400/30 font-mono">
+          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-300 border border-red-400/30 font-mono">
             Next.js 16 + Cloud
           </span>
         </div>
@@ -96,11 +96,11 @@ export default function FloatingGlassCards() {
         <p className="text-slate-400 text-sm leading-relaxed mb-4">
           Deep architectural fluency across Next.js App Router, Cloud Firestore real-time synchronization, and modern serverless architectures.
         </p>
-        <div className="pt-3 border-t border-cyan-400/15 flex flex-wrap gap-1.5">
+        <div className="pt-3 border-t border-red-400/15 flex flex-wrap gap-1.5">
           {["TypeScript", "Turbopack", "Tailwind v4", "Firestore"].map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-sky-400/20 text-[11px] text-slate-300 font-mono"
+              className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-rose-400/20 text-[11px] text-slate-300 font-mono"
             >
               {tag}
             </span>
@@ -109,13 +109,13 @@ export default function FloatingGlassCards() {
       </TiltCard>
 
       {/* Card 3: Lighthouse 100% */}
-      <TiltCard className="hover:border-blue-400/50 hover:shadow-[0_0_35px_rgba(59,130,246,0.25)] border-t-2 border-t-blue-400/40">
+      <TiltCard className="hover:border-pink-400/50 hover:shadow-[0_0_35px_rgba(236,72,153,0.25)] border-t-2 border-t-pink-400/40">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-11 h-11 rounded-2xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+          <div className="w-11 h-11 rounded-2xl bg-pink-500/15 border border-pink-400/30 flex items-center justify-center text-pink-400 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
             <Award className="w-6 h-6" />
           </div>
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-300 border border-blue-400/30">
-            <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-pink-500/10 text-pink-300 border border-pink-400/30">
+            <ShieldCheck className="w-3.5 h-3.5 text-pink-400" />
             <span>Audit Score</span>
           </span>
         </div>
@@ -125,15 +125,15 @@ export default function FloatingGlassCards() {
         <p className="text-slate-400 text-sm leading-relaxed mb-4">
           Obsessive attention to web vitals: zero layout shift, GPU-accelerated 60 FPS transitions, and crystal-clear accessibility.
         </p>
-        <div className="grid grid-cols-4 gap-1.5 pt-3 border-t border-blue-400/15 text-center font-mono">
+        <div className="grid grid-cols-4 gap-1.5 pt-3 border-t border-pink-400/15 text-center font-mono">
           {[
             { label: "Perf", val: "100" },
             { label: "Acc", val: "100" },
             { label: "BP", val: "100" },
             { label: "SEO", val: "100" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-white/[0.03] rounded-lg p-1 border border-sky-400/20">
-              <div className="text-xs font-bold text-sky-400">{stat.val}</div>
+            <div key={stat.label} className="bg-white/[0.03] rounded-lg p-1 border border-rose-400/20">
+              <div className="text-xs font-bold text-rose-400">{stat.val}</div>
               <div className="text-[9px] text-slate-400">{stat.label}</div>
             </div>
           ))}

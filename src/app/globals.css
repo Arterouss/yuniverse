@@ -2,15 +2,15 @@
 
 @layer base {
   :root {
-    --bg-deep-space: #080A0F;
-    --sky-blue: #38BDF8;
-    --cyan-glow: #06B6D4;
-    --ice-white: #F8FAFC;
-    --slate-gray: #94A3B8;
+    --bg-deep-space: #0B0608;
+    --sky-blue: #F43F5E;
+    --cyan-glow: #E11D48;
+    --ice-white: #FFF1F2;
+    --slate-gray: #9F1239;
   }
 
   * {
-    border-color: rgba(56, 189, 248, 0.15);
+    border-color: rgba(244, 63, 94, 0.18);
   }
 
   body {
@@ -18,7 +18,7 @@
     color: var(--ice-white);
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     overflow-x: hidden;
-    selection-background-color: rgba(56, 189, 248, 0.3);
+    selection-background-color: rgba(244, 63, 94, 0.35);
     selection-color: #ffffff;
   }
 
@@ -28,45 +28,45 @@
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #080A0F;
+    background: #0B0608;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(56, 189, 248, 0.3);
+    background: rgba(244, 63, 94, 0.35);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(56, 189, 248, 0.6);
+    background: rgba(244, 63, 94, 0.65);
   }
 }
 
 /* Design System Utilities */
 @utility cosmic-glass {
-  background-color: rgba(8, 10, 15, 0.82);
+  background-color: rgba(11, 6, 8, 0.85);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
 @utility cosmic-glass-light {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
 @utility cosmic-glass-hover {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   &:hover {
-    background-color: rgba(56, 189, 248, 0.08);
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 0 35px rgba(56, 189, 248, 0.28), 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    background-color: rgba(244, 63, 94, 0.1);
+    border-color: rgba(244, 63, 94, 0.6);
+    box-shadow: 0 0 35px rgba(225, 29, 72, 0.32), 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
   }
 }
 
 @utility cosmic-gradient-text {
-  background: linear-gradient(135deg, #38BDF8 0%, #06B6D4 50%, #3B82F6 100%);
+  background: linear-gradient(135deg, #FB7185 0%, #F43F5E 50%, #E11D48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -32,16 +32,16 @@ export default function EmptyStateCard({
   const primaryCtaHref = isFilterEmpty ? "/projects" : isNotFound ? ctaHref || "/projects" : "/contact";
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-8 sm:p-12 rounded-3xl cosmic-glass border-2 border-sky-400/40 shadow-[0_0_40px_rgba(56,189,248,0.2)] relative overflow-hidden text-center my-10">
-      {/* Blue Corner Accents */}
-      <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-sky-400/30 to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-cyan-400/30 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-sky-400/30 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-cyan-400/30 to-transparent pointer-events-none" />
+    <div className="w-full max-w-4xl mx-auto p-8 sm:p-12 rounded-3xl cosmic-glass border-2 border-rose-400/40 shadow-[0_0_40px_rgba(244,63,94,0.2)] relative overflow-hidden text-center my-10">
+      {/* Rose Corner Accents */}
+      <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-rose-400/30 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-red-400/30 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-rose-400/30 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-red-400/30 to-transparent pointer-events-none" />
 
       {/* Icon Orb */}
-      <div className="w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-sky-400/20 via-cyan-500/20 to-blue-600/20 border border-sky-400/40 flex items-center justify-center shadow-[0_0_25px_rgba(56,189,248,0.3)] animate-float-slow">
-        <Sparkles className="w-10 h-10 text-sky-400 animate-pulse" />
+      <div className="w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-rose-400/20 via-red-500/20 to-pink-600/20 border border-rose-400/40 flex items-center justify-center shadow-[0_0_25px_rgba(244,63,94,0.3)] animate-float-slow">
+        <Sparkles className="w-10 h-10 text-rose-400 animate-pulse" />
       </div>
 
       <h3 className="text-2xl sm:text-3xl font-black text-ice-white tracking-tight mb-4">
@@ -55,7 +55,7 @@ export default function EmptyStateCard({
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
           href={primaryCtaHref}
-          className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(56,189,248,0.5)] hover:shadow-[0_0_35px_rgba(56,189,248,0.8)] hover:scale-[1.02] transition-all duration-300"
+          className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(244,63,94,0.5)] hover:shadow-[0_0_35px_rgba(244,63,94,0.8)] hover:scale-[1.02] transition-all duration-300"
         >
           <FolderGit2 className="w-5 h-5" />
           <span>{primaryCtaText}</span>
@@ -64,7 +64,7 @@ export default function EmptyStateCard({
         
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-sky-400/30 text-sky-300 hover:text-white font-semibold text-sm transition-all hover:border-sky-400"
+          className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-rose-400/30 text-rose-300 hover:text-white font-semibold text-sm transition-all hover:border-rose-400"
         >
           <span>Explore Skills & Bio</span>
         </Link>

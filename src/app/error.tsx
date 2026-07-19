@@ -38,7 +38,7 @@ export default function ErrorPage({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => reset()}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(56,189,248,0.5)] hover:shadow-[0_0_35px_rgba(56,189,248,0.8)] hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(244,63,94,0.5)] hover:shadow-[0_0_35px_rgba(244,63,94,0.8)] hover:scale-[1.02] transition-all duration-300 cursor-pointer"
           >
             <RotateCcw className="w-5 h-5 group-hover:-rotate-45 transition-transform" />
             <span>Re-render Component</span>
@@ -46,7 +46,7 @@ export default function ErrorPage({
 
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-sky-400/30 text-sky-300 hover:text-white font-semibold text-sm transition-all hover:border-sky-400"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl cosmic-glass border border-rose-400/30 text-rose-300 hover:text-white font-semibold text-sm transition-all hover:border-rose-400"
           >
             <Home className="w-4 h-4" />
             <span>Return to Universe</span>

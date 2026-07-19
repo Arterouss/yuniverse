@@ -11,18 +11,18 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#080A0F] border-t border-sky-400/20 pt-16 pb-12 overflow-hidden shadow-[0_-10px_30px_rgba(56,189,248,0.05)]">
+    <footer className="relative bg-[#0B0608] border-t border-rose-400/20 pt-16 pb-12 overflow-hidden shadow-[0_-10px_30px_rgba(244,63,94,0.05)]">
       {/* Background Cosmic Glow Orb */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-32 bg-gradient-to-r from-sky-500/10 via-cyan-500/15 to-blue-600/10 blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-32 bg-gradient-to-r from-rose-500/10 via-pink-500/15 to-red-600/10 blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-400 via-cyan-500 to-blue-600 p-[1px] shadow-[0_0_15px_rgba(56,189,248,0.4)]">
-                <div className="w-full h-full bg-[#080A0F] rounded-[11px] flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-sky-400" />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-400 via-red-500 to-pink-600 p-[1px] shadow-[0_0_15px_rgba(244,63,94,0.4)]">
+                <div className="w-full h-full bg-[#0B0608] rounded-[11px] flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-rose-400" />
                 </div>
               </div>
               <span className="cosmic-gradient-text font-black tracking-tight text-xl">
@@ -37,7 +37,7 @@ export default function Footer() {
                 href="https://github.com/Arterouss"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400/50 transition-all shadow-[0_0_15px_rgba(56,189,248,0.1)]"
+                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-rose-400 hover:border-rose-400/50 transition-all shadow-[0_0_15px_rgba(244,63,94,0.1)]"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
@@ -46,7 +46,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/bayu-anggara-715b813b2/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400/50 transition-all shadow-[0_0_15px_rgba(56,189,248,0.1)]"
+                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-rose-400 hover:border-rose-400/50 transition-all shadow-[0_0_15px_rgba(244,63,94,0.1)]"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -62,7 +62,7 @@ export default function Footer() {
               </a>
               <Link
                 href="/contact"
-                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400/50 transition-all shadow-[0_0_15px_rgba(56,189,248,0.1)]"
+                className="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center text-slate-300 hover:text-rose-400 hover:border-rose-400/50 transition-all shadow-[0_0_15px_rgba(244,63,94,0.1)]"
                 aria-label="Email Contact Portal"
                 title="Send Inquiry to Private Email"
               >
@@ -74,27 +74,27 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-ice-white mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
               Cosmic Navigation
             </h3>
             <ul className="space-y-2.5 text-sm font-medium">
               <li>
-                <Link href="/" className="text-slate-400 hover:text-sky-400 transition-colors">
+                <Link href="/" className="text-slate-400 hover:text-rose-400 transition-colors">
                   Home Universe
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-slate-400 hover:text-sky-400 transition-colors">
+                <Link href="/projects" className="text-slate-400 hover:text-rose-400 transition-colors">
                   Project Catalog
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-400 hover:text-sky-400 transition-colors">
+                <Link href="/about" className="text-slate-400 hover:text-rose-400 transition-colors">
                   Skills Matrix & Bio
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-400 hover:text-sky-400 transition-colors">
+                <Link href="/contact" className="text-slate-400 hover:text-rose-400 transition-colors">
                   Contact & Inquiries
                 </Link>
               </li>
@@ -104,23 +104,23 @@ export default function Footer() {
           {/* Portal & System */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-ice-white mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
               Admin & System
             </h3>
             <ul className="space-y-2.5 text-sm font-medium">
               <li>
                 <Link
                   href="/admin/login"
-                  className="inline-flex items-center gap-2 text-slate-400 hover:text-sky-400 transition-colors"
+                  className="inline-flex items-center gap-2 text-slate-400 hover:text-rose-400 transition-colors"
                 >
-                  <Terminal className="w-4 h-4 text-sky-400" />
+                  <Terminal className="w-4 h-4 text-rose-400" />
                   <span>Admin CMS Portal</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/admin/dashboard"
-                  className="text-slate-400 hover:text-sky-400 transition-colors"
+                  className="text-slate-400 hover:text-rose-400 transition-colors"
                 >
                   CMS Dashboard
                 </Link>
@@ -133,13 +133,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-sky-400/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-rose-400/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-400 flex items-center gap-1.5">
-            © {new Date().getFullYear()} YuuUnivers. Crafted with <Heart className="w-3.5 h-3.5 text-sky-400 inline fill-sky-400" /> for the digital frontier.
+            © {new Date().getFullYear()} YuuUnivers. Crafted with <Heart className="w-3.5 h-3.5 text-rose-400 inline fill-rose-400" /> for the digital frontier.
           </p>
           <button
             onClick={scrollToTop}
-            className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl cosmic-glass text-xs font-semibold text-sky-300 hover:text-white border border-sky-400/30 hover:border-sky-400 transition-all shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl cosmic-glass text-xs font-semibold text-rose-300 hover:text-white border border-rose-400/30 hover:border-rose-400 transition-all shadow-[0_0_15px_rgba(244,63,94,0.15)]"
           >
             <span>Back to Orbit</span>
             <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-1 transition-transform duration-300" />

@@ -62,8 +62,8 @@ export default function ContactPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
       {/* Header Banner */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full cosmic-glass border border-sky-400/40 text-xs font-semibold text-sky-300 shadow-[0_0_20px_rgba(56,189,248,0.2)]">
-          <Mail className="w-4 h-4 text-sky-400" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full cosmic-glass border border-rose-400/40 text-xs font-semibold text-rose-300 shadow-[0_0_20px_rgba(244,63,94,0.2)]">
+          <Mail className="w-4 h-4 text-rose-400" />
           <span>Get in Touch</span>
         </div>
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-ice-white">
@@ -77,19 +77,19 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Col: Business & Collaboration Hub (Option 3 - No public email/phone exposed) */}
         <div className="lg:col-span-5 space-y-8">
-          <div className="cosmic-glass rounded-3xl p-8 border border-sky-400/30 space-y-6 shadow-[0_10px_40px_rgba(56,189,248,0.12)]">
-            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-sky-400/15 pb-4">
-              <Sparkles className="w-5 h-5 text-sky-400" />
+          <div className="cosmic-glass rounded-3xl p-8 border border-rose-400/30 space-y-6 shadow-[0_10px_40px_rgba(244,63,94,0.12)]">
+            <h3 className="text-xl font-bold text-ice-white flex items-center gap-2 border-b border-rose-400/15 pb-4">
+              <Sparkles className="w-5 h-5 text-rose-400" />
               <span>Business Inquiry Hub</span>
             </h3>
 
             <div className="space-y-6 text-sm">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-400 shrink-0 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+                <div className="w-10 h-10 rounded-xl bg-rose-500/15 border border-rose-400/30 flex items-center justify-center text-rose-400 shrink-0 shadow-[0_0_15px_rgba(244,63,94,0.2)]">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-sky-300 uppercase block font-bold">100% Clean Code & Peak Vitals</span>
+                  <span className="text-xs font-mono text-rose-300 uppercase block font-bold">100% Clean Code & Peak Vitals</span>
                   <span className="text-xs text-slate-300 leading-relaxed mt-1 block">
                     Every project is engineered with strict TypeScript type-safety, zero layout shifts, and peak 60 FPS spatial UI transitions.
                   </span>
@@ -97,11 +97,11 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                <div className="w-10 h-10 rounded-xl bg-red-500/15 border border-red-400/30 flex items-center justify-center text-red-400 shrink-0 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-cyan-300 uppercase block font-bold">Rapid 2-Hour Response Guarantee</span>
+                  <span className="text-xs font-mono text-red-300 uppercase block font-bold">Rapid 2-Hour Response Guarantee</span>
                   <span className="text-xs text-slate-300 leading-relaxed mt-1 block">
                     All inquiries submitted via our secure portal are reviewed immediately. You will receive a direct reply from Yuu within 2 hours.
                   </span>
@@ -109,11 +109,11 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-400/30 flex items-center justify-center text-blue-400 shrink-0 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                <div className="w-10 h-10 rounded-xl bg-pink-500/15 border border-pink-400/30 flex items-center justify-center text-pink-400 shrink-0 shadow-[0_0_15px_rgba(236,72,153,0.2)]">
                   <Globe className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-blue-300 uppercase block font-bold">Remote & Asynchronous Operations</span>
+                  <span className="text-xs font-mono text-pink-300 uppercase block font-bold">Remote & Asynchronous Operations</span>
                   <span className="text-xs text-slate-300 leading-relaxed mt-1 block">
                     Seamlessly collaborating with startups and enterprise clients worldwide across flexible time zones (UTC+7 base).
                   </span>
@@ -122,9 +122,9 @@ export default function ContactPage() {
             </div>
 
             {/* Encrypted Inquiry Dispatch Badge */}
-            <div className="pt-4 border-t border-sky-400/15">
-              <div className="w-full py-4 px-5 rounded-2xl cosmic-glass border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
-                <Lock className="w-4 h-4 text-sky-400 shrink-0" />
+            <div className="pt-4 border-t border-rose-400/15">
+              <div className="w-full py-4 px-5 rounded-2xl cosmic-glass border border-rose-400/40 text-rose-300 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-[0_0_20px_rgba(244,63,94,0.15)]">
+                <Lock className="w-4 h-4 text-rose-400 shrink-0" />
                 <span>End-to-End Encrypted Dispatch</span>
               </div>
             </div>
@@ -133,9 +133,9 @@ export default function ContactPage() {
 
         {/* Right Col: Interactive Contact Form */}
         <div className="lg:col-span-7">
-          <div className="cosmic-glass rounded-3xl p-8 sm:p-10 border border-sky-400/30 shadow-[0_10px_50px_rgba(56,189,248,0.15)] relative overflow-hidden">
+          <div className="cosmic-glass rounded-3xl p-8 sm:p-10 border border-rose-400/30 shadow-[0_10px_50px_rgba(244,63,94,0.15)] relative overflow-hidden">
             <h3 className="text-2xl font-bold text-ice-white mb-6 flex items-center gap-2">
-              <MessageSquare className="w-6 h-6 text-sky-400" />
+              <MessageSquare className="w-6 h-6 text-rose-400" />
               <span>Send Interactive Inquiry</span>
             </h3>
 
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
-                  className="px-6 py-3 rounded-xl cosmic-glass border border-sky-400/40 text-sky-300 hover:text-white text-xs font-semibold uppercase tracking-wider"
+                  className="px-6 py-3 rounded-xl cosmic-glass border border-rose-400/40 text-rose-300 hover:text-white text-xs font-semibold uppercase tracking-wider"
                 >
                   Send Another Message
                 </button>
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     <input
                       {...register("name")}
                       placeholder="e.g. Alex Rivera"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#080A0F]/90 border border-sky-400/30 text-ice-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400/50 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#0B0608]/90 border border-rose-400/30 text-ice-white focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400/50 transition-all text-sm"
                     />
                     {errors.name && <p className="text-xs text-rose-400">{errors.name.message}</p>}
                   </div>
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     <input
                       {...register("email")}
                       placeholder="alex@example.com"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#080A0F]/90 border border-sky-400/30 text-ice-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400/50 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#0B0608]/90 border border-rose-400/30 text-ice-white focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400/50 transition-all text-sm"
                     />
                     {errors.email && <p className="text-xs text-rose-400">{errors.email.message}</p>}
                   </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
                     <input
                       {...register("subject")}
                       placeholder="e.g. Next.js 16 3D Web App Project"
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#080A0F]/90 border border-sky-400/30 text-ice-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400/50 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#0B0608]/90 border border-rose-400/30 text-ice-white focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400/50 transition-all text-sm"
                     />
                     {errors.subject && <p className="text-xs text-rose-400">{errors.subject.message}</p>}
                   </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </label>
                     <select
                       {...register("budget")}
-                      className="w-full px-4 py-3.5 rounded-xl bg-[#080A0F]/90 border border-sky-400/30 text-ice-white focus:border-sky-400 focus:outline-none transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-[#0B0608]/90 border border-rose-400/30 text-ice-white focus:border-rose-400 focus:outline-none transition-all text-sm"
                     >
                       <option value="<$3,000">&lt; $3,000</option>
                       <option value="$3,000 - $5,000">$3,000 - $5,000</option>
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     {...register("message")}
                     rows={5}
                     placeholder="Describe your project vision, timeline requirements, or technical goals..."
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#080A0F]/90 border border-sky-400/30 text-ice-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400/50 transition-all text-sm leading-relaxed"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#0B0608]/90 border border-rose-400/30 text-ice-white focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400/50 transition-all text-sm leading-relaxed"
                   />
                   {errors.message && <p className="text-xs text-rose-400">{errors.message.message}</p>}
                 </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-500 to-blue-600 text-[#080A0F] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(56,189,248,0.5)] hover:shadow-[0_0_45px_rgba(56,189,248,0.8)] hover:scale-[1.01] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-rose-400 via-red-500 to-pink-600 text-[#0B0608] font-bold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(244,63,94,0.5)] hover:shadow-[0_0_45px_rgba(244,63,94,0.8)] hover:scale-[1.01] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <Send className="w-5 h-5" />
                   <span>{isSubmitting ? "Transmitting Dispatch..." : "Transmit Dispatch to Yuu"}</span>
